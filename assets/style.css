@@ -13,3 +13,6 @@ h6 {
 .shopping-cart{
     padding-block: 3%;
 }
+.price-details h6{
+    padding: 3% 2%;
+}
