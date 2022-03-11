@@ -10,7 +10,7 @@
     if(isset($_POST['add'])){
         if(isset($_SESSION['cart'])){
             $item_array_id = array_column($_SESSION['cart'],"product_id");
-            print_r($item_array_id);
+            // print_r($item_array_id);
 
             if(in_array($_POST['product_id'],$item_array_id)){
                 echo "<script>alert('This item has already been added to the cart')</script>";
@@ -19,7 +19,7 @@
                 $count = count($_SESSION['cart']);
                 $item_array = array('product_id' => $_POST['product_id']);
                 $_SESSION['cart'][$count] = $item_array;
-                print_r($_SESSION['cart']);
+                // print_r($_SESSION['cart']);
             }
 
         }else{
@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="assets/all.min.css">
 </head>
 <body>
+    <?php require_once 'php/header.php'?>
     <div class="container">
         <div class="row text-center py-5">
             <?php 
